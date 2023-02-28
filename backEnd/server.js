@@ -13,7 +13,7 @@ const app = express();
 dbConnection;
 //middleware
 app.use(
-  cors()
+  cors({origin:"https://chat-app-client-pi-mauve.vercel.app"})
 );
 app.use(express.json());
 app.use("/images", express.static("images"));

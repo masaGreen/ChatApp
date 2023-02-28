@@ -10,7 +10,7 @@ const SingleConversation = ({ recipient }) => {
 
   const fetchMessages = async (sender, recip) => {
     const { data } = await axios.get(
-      `https://chatapp-api-k0nx.onrender.com/message/${sender}/${recip}`
+      `https://chatapp-api-w60f.onrender.com/message/${sender}/${recip}`
     );
 
     setChatMessages(data);

@@ -12,7 +12,7 @@ const Login = () => {
   const authUser = async (data) => {
     try {
       const response = await axios.post(
-        "https://chatapp-api-k0nx.onrender.com/user/auth",
+        "https://chatapp-api-w60f.onrender.com/user/auth",
         
         data
       );
