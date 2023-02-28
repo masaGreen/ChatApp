@@ -46,8 +46,7 @@ app.listen(3500, () => {
 const socketio = new Server(3800, {
   cors: {
     origin: "https://chat-app-client-pi-mauve.vercel.app",
-    
-  },
+  }
 });
 
 let users = [];
