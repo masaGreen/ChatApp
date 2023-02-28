@@ -13,6 +13,12 @@ const Login = () => {
     try {
       const response = await axios.post(
         "https://chatapp-api-k0nx.onrender.com/user/auth",
+        {
+          headers: {
+            "Access-Control-Allow-Origin":
+              "https://chat-app-client-pi-mauve.vercel.app",
+          },
+        },
         data
       );
       localStorage.setItem("user", JSON.stringify(response.data));
