@@ -8,23 +8,14 @@ import multer from "multer";
 import { Server } from "socket.io";
 
 const app = express();
-app.use(
-  cors({
-    origin: [
-      "http://localhost:3000",
-      "https://chat-app-client-pi-mauve.vercel.app/",
-    ],
-  })
-);
+
 
 dbConnection;
 //middleware
 app.use(
   cors({
-    origin: [
-      "http://localhost:3000",
-      "https://chat-app-client-pi-mauve.vercel.app/",
-    ],
+    origin: "https://chat-app-client-pi-mauve.vercel.app",
+    
   })
 );
 app.use(express.json());
@@ -54,10 +45,8 @@ app.listen(3500, () => {
 
 const socketio = new Server(3800, {
   cors: {
-    origin: [
-      "http://localhost:3000",
-      "https://chat-app-client-pi-mauve.vercel.app/",
-    ],
+    origin: "https://chat-app-client-pi-mauve.vercel.app",
+    
   },
 });
 
