@@ -11,7 +11,7 @@ const SignUp = () => {
   const [errMessage, setErrMessage] = useState(null);
   const createUser = async (data) => {
     try {
-      const response = await axios.post("http://localhost:3500/user", data);
+      const response = await axios.post("https://chatapp-api-k0nx.onrender.com/user", data);
       setUser(response.data);
       return response.data;
     } catch (error) {

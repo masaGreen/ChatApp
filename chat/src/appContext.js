@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState} from "react";
 
 const AppContext = createContext();
 
@@ -10,8 +10,11 @@ export const ContextProvider = ({ children }) => {
   const [recipient, setRecipient] = useState(null);
   const [file, setFile] = useState(null);
   const [onlineUsers, setOnlineUsers] = useState([]);
+ 
   function handleLogOut() {
+    
     localStorage.removeItem("user");
+  
     setUser(null);
   }
   return (

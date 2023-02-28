@@ -12,7 +12,7 @@ const Login = () => {
   const authUser = async (data) => {
     try {
       const response = await axios.post(
-        "http://localhost:3500/user/auth",
+        "https://chatapp-api-k0nx.onrender.com/user/auth",
         data
       );
       localStorage.setItem("user", JSON.stringify(response.data));
