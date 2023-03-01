@@ -6,7 +6,7 @@ const Message = ({ mess }) => {
   const { recipient, chatMessages, user } = useContext(AppContext);
 
   return (
-    <>
+    <div className="messageContainer">
       {recipient && chatMessages.length > 0 && (
         <main
           className={
@@ -35,7 +35,7 @@ const Message = ({ mess }) => {
           )}
         </main>
       )}
-    </>
+    </div>
   );
 };
 export default Message;

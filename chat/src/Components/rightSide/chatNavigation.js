@@ -2,7 +2,7 @@ import { useContext } from "react";
 import AppContext from "../../appContext";
 
 const ChatNavigation = () => {
-  const { recipient, handleLogOut } = useContext(AppContext);
+  const { recipient, handleLogOut , setShowChats} = useContext(AppContext);
 
   return (
     <nav className="chatNavigationWrapper">
@@ -22,19 +22,33 @@ const ChatNavigation = () => {
               outline: "none",
               marginRight: "3rem",
             }}
+            onClick={setShowChats(false)}
+          >
+           chats
+          </button>
+
+          <button className=".chatimg"
+            style={{
+              background: "teal",
+              padding: "5px",
+              cursor: "pointer",
+              border: "none",
+              outline: "none",
+              marginRight: "3rem",
+            }}
             onClick={handleLogOut}
           >
             logout
           </button>
 
           
-          <div className="searchDiv">
+          {/* <div className="searchDiv">
             <input
               type="text"
               placeholder="search"
               className="search"
             />
-          </div>
+          </div> */}
         </>
       ) : (
         <div

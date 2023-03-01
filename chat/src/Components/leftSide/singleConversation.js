@@ -3,7 +3,7 @@ import AppContext from "../../appContext";
 import axios from "axios";
 
 const SingleConversation = ({ recipient }) => {
-  const { setRecipient, setRecipientId, setChatMessages, user, onlineUsers } =
+  const { setRecipient, setRecipientId, setChatMessages, user, onlineUsers,setShowChats } =
     useContext(AppContext);
 
   const onlineFlag = onlineUsers.some((user) => user.userId === recipient._id);
@@ -21,7 +21,7 @@ const SingleConversation = ({ recipient }) => {
   function handleHeader() {
     setRecipient(recipient.name);
     setRecipientId(recipient._id);
-
+    setShowChats(true)
     fetchMessages(user._id, recipient._id);
   }
   return (

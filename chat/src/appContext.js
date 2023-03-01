@@ -10,6 +10,7 @@ export const ContextProvider = ({ children }) => {
   const [recipient, setRecipient] = useState(null);
   const [file, setFile] = useState(null);
   const [onlineUsers, setOnlineUsers] = useState([]);
+  const [showChats, setShowChats] = useState(true);
  
   function handleLogOut() {
     
@@ -35,6 +36,8 @@ export const ContextProvider = ({ children }) => {
         handleLogOut,
         onlineUsers,
         setOnlineUsers,
+        showChats, 
+        setShowChats
       }}
     >
       {children}
