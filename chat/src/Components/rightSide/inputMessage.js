@@ -29,7 +29,7 @@ const InputMessage = () => {
   //addUser to the active users..
 
   useEffect(() => {
-    ioSocket.current = io("https://socketio-m5l3.onrender.com");
+    ioSocket.current = io("https://socketio-12qa.onrender.com");
     ioSocket.current.emit("addUser", user._id);
     
     ioSocket.current.on("getUsers", (users) => {
