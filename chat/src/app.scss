@@ -239,6 +239,10 @@ body{
                 background-color: rgb(51, 134, 51);
             }
            
+            .messageContainer{
+                display: flex;
+                padding: 5px;
+            }
             .messageWrapper{
                 padding:5px;
                 background-color: rgb(180, 241, 241);
@@ -251,7 +255,7 @@ body{
                 font-size: 15px;
                 width: fit-content;
                 // min-width: 3rem;
-                align-self: flex-start;
+                align-self: start;
                 
             }
 
@@ -261,7 +265,7 @@ body{
                     border-bottom-left-radius:15px ;
                     border-bottom-right-radius:10px ;
                     border-top-left-radius: 10px;
-                    align-self: flex-end;
+                    align-self: end;
                     
                     color: rgb(233, 226, 226);
                     font-family: Arial, Helvetica, sans-serif;
@@ -339,6 +343,11 @@ body{
         }
       
     }
+    // @media screen and (max-width:600px) {
+    //     display: none;
+    //     justify-content: start;
+    //     padding: 2px;
+    // }
     .chatNavigationWrapper{
         height:3rem;
         background-color:rgb(8, 70, 70);
@@ -347,11 +356,7 @@ body{
         align-items: center;
         padding:5px;
        
-        @media screen and (max-width:600px) {
-            display: none;
-            justify-content: start;
-            padding: 2px;
-        }
+        
         .chatimg{
             @media screen and (max-width:600px) {
                 display: none;
