@@ -279,7 +279,7 @@ body{
         flex:1;  
         background-color: rgb(74, 74, 189);
         @media screen and (max-width:600px) {
-            display: none;
+            width:80px ;
         }
        
         nav{
@@ -346,7 +346,7 @@ body{
         display: flex;
         align-items: center;
         padding:5px;
-        
+      
         .imgDiv{
             display: flex;
             align-items: center;
@@ -356,6 +356,12 @@ body{
                 height:2rem;
                 width:2rem;
                 border-radius: 50%;
+                
+            }
+            .chatimg{
+                @media screen and (max-width:600px) {
+                    display: none;
+                }
             }
         }
         .searchDiv{

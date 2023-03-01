@@ -12,6 +12,22 @@ const ChatNavigation = () => {
             <img src="desert.jpg" alt="" />
             <p>{recipient}</p>
           </div>
+          
+          <button className=".chatimg"
+            style={{
+              background: "teal",
+              padding: "5px",
+              cursor: "pointer",
+              border: "none",
+              outline: "none",
+              marginRight: "3rem",
+            }}
+            onClick={handleLogOut}
+          >
+            logout
+          </button>
+
+          
           <div className="searchDiv">
             <input
               type="text"

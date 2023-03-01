@@ -6,7 +6,7 @@ const LeftSideNavigation = () => {
   return (
     <nav className="chatNavigationWrapper">
       <div className="imgDiv">
-        <img src="desert.jpg" alt="" />
+        <img src="desert.jpg" alt="" className="chatimg" />
         <p>{user.name}</p>
         {recipient && (
           <button className="logout-button" onClick={handleLogOut}>
