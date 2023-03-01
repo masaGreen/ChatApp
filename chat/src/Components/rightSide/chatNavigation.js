@@ -59,7 +59,21 @@ const ChatNavigation = () => {
             justifyContent: "space-between",
           }}
         >
-          <p>tap a friend to start chat</p>
+          <p className="navp">tap a friend to start chat</p>
+          
+          <button className="nochats"
+            style={{
+              background: "teal",
+              padding: "5px",
+              cursor: "pointer",
+              border: "none",
+              outline: "none",
+              marginRight: "3rem",
+            }}
+            onClick={setShowChats(false)}
+          >
+           chats
+          </button>
           <button
             style={{
               background: "teal",

@@ -75,6 +75,16 @@ body{
         flex-direction: column;
        
         background-color: rgb(127, 230, 230);
+        .nochats{
+            @media screen and (min-width:600px){
+                display: none;
+            }
+        }
+        .navp{
+            @media screen and (max-width:600px){
+                display: none;
+            }
+        }
        .show-p{
         display: block;
         color:greenyellow;
@@ -276,12 +286,16 @@ body{
           
         }
     }
+    .noLeftWrapper{
+        @media screen and (max-width:500px) {
+            display: none;
+        }
+    }
     .leftWrapper{
+
         flex:1;  
         background-color: rgb(74, 74, 189);
-        @media screen and (max-width:600px) {
-            width:80px ;
-        }
+       
        
         nav{
             background-color: rgba(85, 185, 85, 0.575);
