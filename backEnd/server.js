@@ -5,7 +5,7 @@ import chatRouter from "./routes/chat.js";
 import messageRouter from "./routes/message.js";
 import cors from "cors";
 import multer from "multer";
-import { Server } from "socket.io";
+
 
 const app = express();
 
@@ -19,7 +19,7 @@ app.use(express.json());
 app.use("/images", express.static("images"));
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "./images");
+    cb(null, "https://chatapp-api-w60f.onrender.com/images");
   },
   filename: (req, file, cb) => {
     cb(null, req.body.name);
