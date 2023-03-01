@@ -229,8 +229,6 @@ body{
           padding:5px;
             display: flex;
             flex-direction: column;
-            
-            justify-content: center;
             gap:5px;
             flex-grow: 1;        
             overflow-y: scroll;
@@ -252,8 +250,8 @@ body{
                 font-family: Arial, Helvetica, sans-serif;
                 font-size: 15px;
                 width: fit-content;
-                min-width: 6rem;
-                
+                // min-width: 3rem;
+                align-self: flex-end;
                 
             }
 
@@ -269,7 +267,7 @@ body{
                     font-family: Arial, Helvetica, sans-serif;
                     font-size: 15px;
                     width: fit-content;
-                    min-width: 6rem;
+                    // min-width: 6rem;
                                      
             }
 
