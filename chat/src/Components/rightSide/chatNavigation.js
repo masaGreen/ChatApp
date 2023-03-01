@@ -70,7 +70,7 @@ const ChatNavigation = () => {
               outline: "none",
               marginRight: "3rem",
             }}
-            onClick={setShowChats(false)}
+            onClick={()=>setShowChats(false)}
           >
            chats
           </button>
