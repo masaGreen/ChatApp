@@ -31,7 +31,7 @@ const ChatNavigation = () => {
           <div className="searchDiv">
             <input
               type="text"
-              placeholder="search in chat"
+              placeholder="search"
               className="search"
             />
           </div>

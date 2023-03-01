@@ -129,7 +129,7 @@ body{
            .emojiPicker{
             position: absolute;
             padding:5px;
-           
+           justify-content: center;
            bottom: 3rem;
             right:20px;
             button{
@@ -229,6 +229,8 @@ body{
           padding:5px;
             display: flex;
             flex-direction: column;
+            
+            justify-content: center;
             gap:5px;
             flex-grow: 1;        
             overflow-y: scroll;
@@ -346,7 +348,18 @@ body{
         display: flex;
         align-items: center;
         padding:5px;
-      
+       
+        @media screen and (max-width:600px) {
+            display: none;
+            justify-content: start;
+            padding: 2px;
+        }
+        .chatimg{
+            @media screen and (max-width:600px) {
+                display: none;
+            }
+        }
+
         .imgDiv{
             display: flex;
             align-items: center;
