@@ -278,6 +278,9 @@ body{
     .leftWrapper{
         flex:1;  
         background-color: rgb(74, 74, 189);
+        @media screen and (max-width:600px) {
+            display: none;
+        }
        
         nav{
             background-color: rgba(85, 185, 85, 0.575);
@@ -360,6 +363,8 @@ body{
             display: flex;
             justify-content: flex-end;
             margin-right: 1rem;
+
+            
             
             input{
                 width:6rem;
