@@ -145,9 +145,7 @@ body{
                 background-color: transparent;
             }
            }
-            // .emoji-div{
-            //     margin-bottom: 8rem;
-            // }
+          
         }
         .message-input{
             display:flex;
@@ -254,7 +252,6 @@ body{
                 font-family: Arial, Helvetica, sans-serif;
                 font-size: 15px;
                 width: fit-content;
-                // min-width: 3rem;
                 align-self: start;
                 
             }
@@ -271,7 +268,7 @@ body{
                     font-family: Arial, Helvetica, sans-serif;
                     font-size: 15px;
                     width: fit-content;
-                    // min-width: 6rem;
+                   
                                      
             }
 
@@ -343,11 +340,7 @@ body{
         }
       
     }
-    // @media screen and (max-width:600px) {
-    //     display: none;
-    //     justify-content: start;
-    //     padding: 2px;
-    // }
+   
     .chatNavigationWrapper{
         height:3rem;
         background-color:rgb(8, 70, 70);
@@ -356,12 +349,6 @@ body{
         align-items: center;
         padding:5px;
        
-        
-        .chatimg{
-            @media screen and (max-width:600px) {
-                display: none;
-            }
-        }
 
         .imgDiv{
             display: flex;
@@ -374,11 +361,7 @@ body{
                 border-radius: 50%;
                 
             }
-            .chatimg{
-                @media screen and (max-width:600px) {
-                    display: none;
-                }
-            }
+            
         }
         .searchDiv{
             flex:2;
