@@ -12,6 +12,8 @@ const LeftSideNavigation = () => {
         <button className="logout-button" onClick={handleLogOut}>
           logout
         </button>
+
+        <p style={{marginLeft:"1rem"}}>Tap a friend...</p>
       </div>
     </nav>
   );
