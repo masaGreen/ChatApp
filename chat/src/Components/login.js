@@ -30,7 +30,8 @@ const Login = () => {
 
     mutate(data);
     setPhone("");
-    navigate("/");
+    window.location.assign("/")
+    // navigate("/");
   }
 
   return (

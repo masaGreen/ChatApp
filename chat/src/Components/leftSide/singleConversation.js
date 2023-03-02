@@ -24,9 +24,10 @@ const SingleConversation = ({ recipient }) => {
     setRecipientId(recipient._id);
     setShowChats(true)
     fetchMessages(user._id, recipient._id);
+    window.location.assign("/chats")
   }
   return (
-    <Link to="/chats"><main className="singleConversationWrapper" onClick={handleHeader}>
+    <main className="singleConversationWrapper" onClick={handleHeader}>
       <img src="desert.jpg" alt="" />
       <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
         <div>
@@ -50,7 +51,7 @@ const SingleConversation = ({ recipient }) => {
         </div>
       </div>
     </main>
-    </Link>
+   
   );
 };
 export default SingleConversation;

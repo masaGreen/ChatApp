@@ -14,7 +14,7 @@ const ChatNavigation = () => {
             <p>{recipient}</p>
           </div>
           
-          <Link to="/">
+          
             <button 
             style={{
               background: "teal",
@@ -26,11 +26,11 @@ const ChatNavigation = () => {
               marginRight: "3rem",
               color:"skyblue"
             }}
-           
+           onClick={()=>window.location.assign("/")}
           >
            chat with others
           </button>
-          </Link>
+          
 
           <button className=".chatimg"
             style={{
