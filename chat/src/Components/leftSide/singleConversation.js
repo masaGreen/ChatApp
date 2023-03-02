@@ -4,7 +4,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const SingleConversation = ({ recipient }) => {
-  const { setRecipient, setRecipientId, setChatMessages, user, onlineUsers,setShowChats } =
+  const { setRecipient, setRecipientId, setChatMessages, user, onlineUsers} =
     useContext(AppContext);
 
   const onlineFlag = onlineUsers.some((user) => user.userId === recipient._id);
@@ -22,9 +22,9 @@ const SingleConversation = ({ recipient }) => {
   function handleHeader() {
     setRecipient(recipient.name);
     setRecipientId(recipient._id);
-    setShowChats(true)
+ 
     fetchMessages(user._id, recipient._id);
-    
+
   }
   return (
     <main className="singleConversationWrapper" onClick={handleHeader}>
