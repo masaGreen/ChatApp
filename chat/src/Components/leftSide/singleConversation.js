@@ -1,9 +1,10 @@
 import { useContext } from "react";
 import AppContext from "../../appContext";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SingleConversation = ({ recipient }) => {
+  const navigate = useNavigate()
   const { setRecipient, setRecipientId, setChatMessages, user, onlineUsers} =
     useContext(AppContext);
 
@@ -24,7 +25,7 @@ const SingleConversation = ({ recipient }) => {
     setRecipientId(recipient._id);
  
     fetchMessages(user._id, recipient._id);
-
+    navigate("/chats")
   }
   return (
     <main className="singleConversationWrapper" onClick={handleHeader}>
