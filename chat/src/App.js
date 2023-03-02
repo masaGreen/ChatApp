@@ -6,6 +6,7 @@ import "./app.scss";
 import AppContext from "./appContext";
 import { useContext } from "react";
 import Login from "./Components/login";
+import LeftSide from "./Components/leftSide/leftSide";
 
 function App() {
   const queryClient = new QueryClient();
@@ -15,7 +16,8 @@ function App() {
       <div className="App">
         <Router>
           <Routes>
-            <Route path="/" element={user ? <ChatContainer /> : <Login />} />
+            <Route path="/chats" element={user ? <ChatContainer /> : <Login />} />
+            <Route path="/" element={user ? <LeftSide /> : <Login />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/login" element={<Login />} />
           </Routes>

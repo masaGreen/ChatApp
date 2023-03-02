@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import AppContext from "../../appContext";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const SingleConversation = ({ recipient }) => {
   const { setRecipient, setRecipientId, setChatMessages, user, onlineUsers,setShowChats } =
@@ -10,7 +11,7 @@ const SingleConversation = ({ recipient }) => {
 
   const fetchMessages = async (sender, recip) => {
     const { data } = await axios.get(
-      `https://chatapp-api-w60f.onrender.com/message/${sender}/${recip}`
+      `https://chatapp-api-w60f.onrender.com/user/${sender}/${recip}`
     );
 
     setChatMessages(data);
@@ -25,7 +26,7 @@ const SingleConversation = ({ recipient }) => {
     fetchMessages(user._id, recipient._id);
   }
   return (
-    <main className="singleConversationWrapper" onClick={handleHeader}>
+    <Link to="/chats"><main className="singleConversationWrapper" onClick={handleHeader}>
       <img src="desert.jpg" alt="" />
       <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
         <div>
@@ -49,6 +50,7 @@ const SingleConversation = ({ recipient }) => {
         </div>
       </div>
     </main>
+    </Link>
   );
 };
 export default SingleConversation;

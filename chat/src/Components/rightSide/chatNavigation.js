@@ -1,8 +1,9 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import AppContext from "../../appContext";
 
 const ChatNavigation = () => {
-  const { recipient, handleLogOut , setShowChats} = useContext(AppContext);
+  const { recipient, handleLogOut } = useContext(AppContext);
 
   return (
     <nav className="chatNavigationWrapper">
@@ -13,19 +14,23 @@ const ChatNavigation = () => {
             <p>{recipient}</p>
           </div>
           
-          <button className=".chatimg"
+          <Link to="/">
+            <button 
             style={{
               background: "teal",
               padding: "5px",
               cursor: "pointer",
               border: "none",
               outline: "none",
+              borderRadius:"5px",
               marginRight: "3rem",
+              color:"skyblue"
             }}
-            onClick={setShowChats(false)}
+           
           >
-           chats
+           chat with others
           </button>
+          </Link>
 
           <button className=".chatimg"
             style={{
@@ -33,8 +38,10 @@ const ChatNavigation = () => {
               padding: "5px",
               cursor: "pointer",
               border: "none",
+              borderRadius:"5px",
               outline: "none",
               marginRight: "3rem",
+              color:"white",
             }}
             onClick={handleLogOut}
           >
@@ -42,13 +49,7 @@ const ChatNavigation = () => {
           </button>
 
           
-          {/* <div className="searchDiv">
-            <input
-              type="text"
-              placeholder="search"
-              className="search"
-            />
-          </div> */}
+    
         </>
       ) : (
         <div
@@ -59,9 +60,9 @@ const ChatNavigation = () => {
             justifyContent: "space-between",
           }}
         >
-          <p className="navp">tap a friend to start chat</p>
           
-          <button className="nochats"
+          
+          <Link to ="/chats"><button className="nochats"
             style={{
               background: "teal",
               padding: "5px",
@@ -70,10 +71,11 @@ const ChatNavigation = () => {
               outline: "none",
               marginRight: "3rem",
             }}
-            onClick={()=>setShowChats(false)}
+           
           >
            chats
           </button>
+          </Link>
           <button
             style={{
               background: "teal",

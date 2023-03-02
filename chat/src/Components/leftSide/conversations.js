@@ -10,6 +10,7 @@ const Conversations = () => {
 
   const getUsers = async () => {
     const { data } = await axios.get("https://chatapp-api-w60f.onrender.com/user");
+    
 
     const processedData = data.filter((friend) => friend._id !== user._id);
     return processedData;

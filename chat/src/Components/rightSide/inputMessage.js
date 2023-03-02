@@ -22,7 +22,7 @@ const InputMessage = () => {
   } = useContext(AppContext);
   const [messageInput, setMessageInput] = useState("");
   const [picker, setPicker] = useState(false);
-  // const [emojiChoice, setEmojiChoice] = useState("");
+
 
   const ioSocket = useRef();
 
