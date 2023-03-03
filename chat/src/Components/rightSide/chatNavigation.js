@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import AppContext from "../../appContext";
 
 const ChatNavigation = () => {
-  const { recipient, handleLogOut,  setChatMessages } = useContext(AppContext);
+  const { recipient, handleLogOut,setChatMessages} = useContext(AppContext);
+function handleClear(){
+  setChatMessages([])
+}
 
-  function handleChatsClear(){
-    // setChatMessages([])
-  }
   return (
     <nav className="chatNavigationWrapper">
       {recipient !== null ? (
@@ -29,7 +29,7 @@ const ChatNavigation = () => {
               marginRight: "3rem",
               color:"skyblue"
             }}
-          onClick={handleChatsClear}
+         onClick={handleClear}
           >
            chat with others
           </button>

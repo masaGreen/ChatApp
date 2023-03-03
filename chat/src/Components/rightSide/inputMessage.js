@@ -29,7 +29,8 @@ const InputMessage = () => {
   //addUser to the active users..
 
   useEffect(() => {
-    ioSocket.current = io("https://socketio-12qa.onrender.com");
+    // ioSocket.current = io("https://socketio-12qa.onrender.com");
+    ioSocket.current = io("http://localhost:3800");
     ioSocket.current.emit("addUser", user._id);
     
     ioSocket.current.on("getUsers", (users) => {
@@ -53,7 +54,8 @@ const InputMessage = () => {
 
   async function createMessage(data) {
     try {
-      const response = await axios.post("https://chatapp-api-w60f.onrender.com/message", data);
+      const response = await axios.post("http://localhost:3500/message", data);
+      // const response = await axios.post("https://chatapp-api-w60f.onrender.com/message", data);
 
       setChatMessages([...chatMessages, response.data]);
 
@@ -104,7 +106,8 @@ const InputMessage = () => {
       }
 
       try {
-        await axios.post("https://chatapp-api-w60f.onrender.com/imageUpload", formData);
+        await axios.post("http://localhost:3500/imageUpload", formData);
+        // await axios.post("https://chatapp-api-w60f.onrender.com/imageUpload", formData);
         setFile(null);
       } catch (error) {
         console.log(error);
