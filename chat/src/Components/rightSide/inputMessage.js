@@ -35,6 +35,9 @@ const InputMessage = () => {
     ioSocket.current.on("getUsers", (users) => {
       setOnlineUsers(users);
     });
+    ioSocket.current.on("leftUsers", (users) => {
+      setOnlineUsers(users);
+    });
     
   }, [user, setOnlineUsers]);
 

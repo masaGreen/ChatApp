@@ -6,7 +6,7 @@ const ChatNavigation = () => {
   const { recipient, handleLogOut,  setChatMessages } = useContext(AppContext);
 
   function handleChatsClear(){
-    setChatMessages([])
+    // setChatMessages([])
   }
   return (
     <nav className="chatNavigationWrapper">
