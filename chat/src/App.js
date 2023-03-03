@@ -17,7 +17,7 @@ function App() {
         <Router>
           <Routes>
             <Route path="/chats" element={user ? <ChatContainer /> : <Login />} />
-            <Route path="/" element={user ? <LeftSide /> : <Login />} />
+            <Route path="/" element={user ? <LeftSide /> : <SignUp />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/login" element={<Login />} />
           </Routes>
