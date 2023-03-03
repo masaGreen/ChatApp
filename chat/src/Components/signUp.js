@@ -12,8 +12,8 @@ const SignUp = () => {
   const createUser = async (data) => {
     try {
       const response = await axios.post(
-        "http://localhost:3500/user",
-        // "https://chatapp-api-w60f.onrender.com/user",
+        // "http://localhost:3500/user",
+         "https://chatapp-api-w60f.onrender.com/user",
          data);
       setUser(response.data);
       return response.data;

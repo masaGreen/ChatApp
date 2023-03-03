@@ -5,15 +5,15 @@ import { Link, useNavigate } from "react-router-dom";
 
 const SingleConversation = ({ recipient }) => {
   const navigate = useNavigate()
-  const { setRecipient, setRecipientId, setChatMessages, user, onlineUsers} =
+  const { setRecipient, setRecipientId, setChatMessages, user} =
     useContext(AppContext);
 
-  const onlineFlag = onlineUsers.some((user) => user.userId === recipient._id);
+
 
   const fetchMessages = async (sender, recip) => {
     const { data } = await axios.get(
-      // `https://chatapp-api-w60f.onrender.com/message/${sender}/${recip}`
-      `http://localhost:3500/message/${sender}/${recip}`
+      `https://chatapp-api-w60f.onrender.com/message/${sender}/${recip}`
+      // `http://localhost:3500/message/${sender}/${recip}`
     );
 
     setChatMessages(data);

@@ -13,8 +13,8 @@ const app = express();
 dbConnection;
 //middleware
 app.use(
-  cors({origin:"http://localhost:3000"})
-  // cors({origin:"https://chat-app-client-pi-mauve.vercel.app"})
+  // cors({origin:"http://localhost:3000"})
+   cors({origin:"https://chat-app-client-pi-mauve.vercel.app"})
 );
 
 app.use(express.json());
