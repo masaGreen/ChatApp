@@ -18,7 +18,8 @@ const Message = ({ mess }) => {
           {mess.image !== "" ? (
             <div className="message-image-div">
               <img
-                src={`https://chatapp-api-w60f.onrender.com/images/${mess.image}`}
+                // src={`https://chatapp-api-w60f.onrender.com/images/${mess.image}`}
+                src={`http://localhost:3000/images/${mess.image}`}
                 alt=""
                 className="message-image"
               />

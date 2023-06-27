@@ -9,8 +9,8 @@ const Conversations = () => {
   const { user } = useContext(AppContext);
 
   const getUsers = async () => {
-    // const { data } = await axios.get("http://localhost:3500/user");
-    const { data } = await axios.get("https://chatapp-api-w60f.onrender.com/user");
+    const { data } = await axios.get("http://localhost:3500/user");
+    // const { data } = await axios.get("https://chatapp-api-w60f.onrender.com/user");
     
 
     const processedData = data.filter((friend) => friend._id !== user._id);

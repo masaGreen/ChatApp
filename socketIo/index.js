@@ -2,8 +2,8 @@ const io = require("socket.io");
 
 const socketio = io(3800, {
   cors: {
-    // origin:"http://localhost:3000"
-      origin: "https://chat-app-client-pi-mauve.vercel.app",
+    origin:"http://localhost:3000"
+      // origin: "https://chat-app-client-pi-mauve.vercel.app",
  
   },
 });

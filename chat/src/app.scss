@@ -302,12 +302,12 @@ body{
     .leftWrapper{
 
         flex:1;  
-        background-color: rgb(74, 74, 189);
+        background-color: teal;
        padding:4rem;
        
         nav{
-            background-color: rgba(85, 185, 85, 0.575);
-            color: blanchedalmond;
+            background-color: rgba(2, 34, 2, 0.575);
+            color: rgb(218, 138, 19);
             
             .logout-button{
                 background:teal;
@@ -337,15 +337,17 @@ body{
             align-items: center;
             gap:5px;
             padding:5px;
+            width: 30%;
             cursor: pointer;
             border-radius: 5px;
+            background-color: rgb(4, 122, 116);
             
             .offline-p{
                 display: none;
             }
             &:hover{
-                background-color: teal;
-                color: steelblue;
+                background-color: rgb(27, 73, 73);
+                color: rgb(9, 74, 128);
             }
             img{
                 height:2rem;

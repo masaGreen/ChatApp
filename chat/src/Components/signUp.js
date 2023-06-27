@@ -12,9 +12,12 @@ const SignUp = () => {
   const createUser = async (data) => {
     try {
       const response = await axios.post(
-        // "http://localhost:3500/user",
-         "https://chatapp-api-w60f.onrender.com/user",
+        "http://localhost:3500/user",
+        //  "https://chatapp-api-w60f.onrender.com/user",
          data);
+      if(response.data === "phone number already registered, use a different one"){
+        throw new Error("phone already registered")
+      }
       setUser(response.data);
       return response.data;
     } catch (error) {

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import AppContext from "../../appContext";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 
 const SingleConversation = ({ recipient }) => {
   const navigate = useNavigate()
@@ -11,9 +11,9 @@ const SingleConversation = ({ recipient }) => {
   const onlineFlag = onlineUsers.some((user) => user.userId === recipient._id);
 
   const fetchMessages = async (sender, recip) => {
-    const { data } = await axios.get(
+    const { data } = await axios.get(`http://localhost:3500/message/${sender}/${recip}`
       
-      `https://chatapp-api-w60f.onrender.com/message/${sender}/${recip}`
+      // `https://chatapp-api-w60f.onrender.com/message/${sender}/${recip}`
     );
 
     setChatMessages(data);

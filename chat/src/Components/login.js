@@ -12,8 +12,8 @@ const Login = () => {
   const authUser = async (data) => {
     try {
       const response = await axios.post(
-         "https://chatapp-api-w60f.onrender.com/user/auth",
-        // "http://localhost:3500/user/auth",
+        //  "https://chatapp-api-w60f.onrender.com/user/auth",
+        "http://localhost:3500/user/auth",
         
         data
       );
