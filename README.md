@@ -24,7 +24,7 @@
  
          
 
-            git clone https://github.com/yourusername/ChatApp
+            git clone https://github.com/yourusername/ChatApp.git
 
 
 - **NB** make sure no application is running on ports 3000, 3500 and 3800 otherwise change ports before running the application
