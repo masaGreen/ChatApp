@@ -4,6 +4,8 @@
 ![ReactJs](https://img.shields.io/badge/rEACTjs-0fa3b1?style=for-the-badge&logo=React&logoColor=white)
 ![SocketIO](https://img.shields.io/badge/SocketIO-353535?style=for-the-badge&logo=Socket.IO&logoColor=white)
 
+https://github.com/masaGreen/ChatApp/assets/111172753/8e7c58af-5994-472f-8b7a-f80285d0dfbd
+
 # Instant Messaging Application
 - An instant messaging web application where users can speak to each other privately with real time messages deliveries.
  
